@@ -1,3 +1,5 @@
 *
-!dotfiles
 !.gitignore
+!.vim/
+!.vim/*
+!.bashrc
