@@ -1,3 +1,6 @@
+call execute(expand('set runtimepath+=$PJT_HOME/dotfiles/.vim/autoload'))
+runtime! plug.vim
+
 set hlsearch 
 set ignorecase 
 set smartcase 
@@ -78,11 +81,21 @@ nnoremap <Space>h :<C-u>tab help<Space>
 
 augroup help-buffer
 	autocmd!
-		autocmd BufWinEnter * if &buftype == 'help'
-				set number relativenumber
-				augroup end
+	autocmd BufWinEnter * if &buftype == 'help'
+	set number relativenumber
+augroup end
 
-			
-				set list 
-				set listchars=tab:--\|,trail:_,eol:$ "
 
+set list 
+set listchars=tab:--\|,trail:_,eol:$ "
+
+
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+"Plug 'junegunn/vim-easy-align'
+
+" Initialize plugin system
+call plug#end()
