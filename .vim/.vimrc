@@ -16,7 +16,8 @@ set backspace=indent,eol,start
 
 
 
-set clipboard=unnamed 
+set clipboard=unnamed
+set undofile
 call execute(expand('set directory=$PJT_HOME/dotfiles/.vim/.swap'))
 call execute(expand('set backupdir=$PJT_HOME/dotfiles/.vim/.backup'))
 call execute(expand('set undodir=$PJT_HOME/dotfiles/.vim/.undo'))
